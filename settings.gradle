@@ -1,0 +1,5 @@
+include ':usermodule'
+include ':providelibrary'
+include ':baselibrary'
+include ':app'
+rootProject.name = "ShopMall"
