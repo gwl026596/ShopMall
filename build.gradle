@@ -4,6 +4,7 @@ buildscript {
     repositories {
         google()
         jcenter()
+        maven { url 'https://jitpack.io' }
     }
     dependencies {
         classpath "com.android.tools.build:gradle:4.0.1"
@@ -18,9 +19,21 @@ allprojects {
     repositories {
         google()
         jcenter()
+        maven { url "https://oss.jfrog.org/libs-snapshot" }
     }
 }
 
 task clean(type: Delete) {
     delete rootProject.buildDir
+}
+
+ext {//定义所有project公用参数  使用rootProject.ext.XX就能拿到相应对象
+
+    debug = [
+            'host'              : 'http://app-test.yysports.com.tw/nextstore-web/',//填写你自己测试环境的接口baseURL
+    ]
+    release = [
+            'host'              : 'https://app.yysports.com.tw/nextstore-web/',//填写你自己测试正式的接口baseURL
+    ]
+
 }

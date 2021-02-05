@@ -3,8 +3,7 @@ package com.pousheng.shopmall
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.pousheng.baselibrary.ext.startNextActivity
-import com.pousheng.usermodule.BuildConfig
-import com.pousheng.usermodule.RegisterActivity
+import com.pousheng.usermodule.ui.RegisterActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -14,7 +13,7 @@ class MainActivity : AppCompatActivity() {
         tvGoRegister.setOnClickListener {
             val bundle=Bundle()
             bundle.putString("id","22")
-            startNextActivity(bundle,RegisterActivity::class.java)
+            startNextActivity(bundle, RegisterActivity::class.java)
         }
     }
 }
